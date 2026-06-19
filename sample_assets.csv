@@ -1,0 +1,5 @@
+asset_id,asset_name,business_service,technology_owner,business_owner,criticality,risk_category,vendor_dependency,controls
+A001,Payments Platform,Payments Processing,Tech Ops,Payments Business,High,Operational Resilience,Yes,"CTRL-001;CTRL-002"
+A002,Customer CRM,Customer Onboarding,CRM Team,Customer Operations,Medium,Data Risk,No,CTRL-010
+A003,Core Banking API,Account Servicing,Platform Engineering,Retail Banking,High,Technology Risk,Yes,
+

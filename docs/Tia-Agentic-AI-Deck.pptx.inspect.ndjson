@@ -1,0 +1,172 @@
+{"kind":"deck","id":"pr/drcp1f","name":"Deck"}
+{"kind":"layout","layoutId":"94ac1613-12f3-4779-aa9f-649b9cf33613","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"d59d0929-2830-4e0f-ac14-82388da08ac0","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/xadh0d","slide":1,"title":"TIA","textShapes":10}
+{"kind":"textbox","id":"sh/vahoza1g","slide":1,"text":"TIA","textPreview":"TIA","textChars":3,"textLines":1,"bbox":[72,74,180,70]}
+{"kind":"textbox","id":"sh/ovahoza1","slide":1,"text":"Trade Investigative Agents","textPreview":"Trade Investigative Agents","textChars":26,"textLines":1,"bbox":[72,146,720,52]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":1,"text":"An MVP for trading-system compliance validation and agentic investigation","textPreview":"An MVP for trading-system compliance validation and agentic investigation","textChars":73,"textLines":1,"bbox":[72,214,820,54]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":1,"bbox":[760,110,390,145]}
+{"kind":"shape","id":"sh/z25kb6xk","slide":1,"bbox":[760,110,7,145]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":1,"text":"Pre-demo","textPreview":"Pre-demo","textChars":8,"textLines":1,"bbox":[782,128,346,28]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":1,"text":"Set the context: why trading-control validation is difficult and why evidence matters.","textPreview":"Set the context: why trading-control validation is difficult and why evidence matters.","textChars":86,"textLines":1,"bbox":[782,166,346,77]}
+{"kind":"shape","id":"sh/6dcbulwv","slide":1,"bbox":[760,285,390,145]}
+{"kind":"shape","id":"sh/vy90je9c","slide":1,"bbox":[760,285,7,145]}
+{"kind":"textbox","id":"sh/nuxc3ylc","slide":1,"text":"Live demo","textPreview":"Live demo","textChars":9,"textLines":1,"bbox":[782,303,346,28]}
+{"kind":"textbox","id":"sh/y90je9cv","slide":1,"text":"Run Market Data Stress and Pre-Trade Risk Control investigations from the sidebar.","textPreview":"Run Market Data Stress and Pre-Trade Risk Control investigations from the sidebar.","textChars":82,"textLines":1,"bbox":[782,341,346,77]}
+{"kind":"shape","id":"sh/5wjudg7a","slide":1,"bbox":[760,460,390,145]}
+{"kind":"shape","id":"sh/gbq1oryt","slide":1,"bbox":[760,460,7,145]}
+{"kind":"textbox","id":"sh/n29gr2p8","slide":1,"text":"Post-demo","textPreview":"Post-demo","textChars":9,"textLines":1,"bbox":[782,478,346,28]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":1,"text":"Interpret the findings, explain the agentic behavior, and show the product extension path.","textPreview":"Interpret the findings, explain the agentic behavior, and show the product extension path.","textChars":90,"textLines":1,"bbox":[782,516,346,77]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":1,"text":"TIA MVP | 1/8","textPreview":"TIA MVP | 1/8","textChars":13,"textLines":1,"bbox":[72,670,160,18]}
+{"kind":"notes","id":"nt/xadh0d","slide":1,"text":""}
+{"kind":"slide","id":"sl/qozrrk","slide":2,"title":"PRE-DEMO CONTEXT","textShapes":12}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":2,"text":"PRE-DEMO CONTEXT","textPreview":"PRE-DEMO CONTEXT","textChars":16,"textLines":1,"bbox":[72,48,620,24]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":2,"text":"The problem: trading failures move faster than manual review","textPreview":"The problem: trading failures move faster than manual review","textChars":60,"textLines":1,"bbox":[72,84,940,88]}
+{"kind":"textbox","id":"sh/pwb2hwfy","slide":2,"text":"A bad configuration, weak pre-trade control, market-data issue, or missing kill switch can create risk before humans can assemble the evidence.","textPreview":"A bad configuration, weak pre-trade control, market-data issue, or missing kill switch can create risk before humans can assemble the evi...","textChars":143,"textLines":1,"bbox":[72,174,980,48]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":2,"text":"TIA MVP | 2/8","textPreview":"TIA MVP | 2/8","textChars":13,"textLines":1,"bbox":[72,670,180,18]}
+{"kind":"shape","id":"sh/7y1kre1w","slide":2,"bbox":[92,250,320,150]}
+{"kind":"shape","id":"sh/wjudg7ad","slide":2,"bbox":[92,250,7,150]}
+{"kind":"textbox","id":"sh/p4r65wju","slide":2,"text":"Fast failure","textPreview":"Fast failure","textChars":12,"textLines":1,"bbox":[114,268,276,28]}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":2,"text":"Automated systems can generate exposure in seconds or minutes.","textPreview":"Automated systems can generate exposure in seconds or minutes.","textChars":62,"textLines":1,"bbox":[114,306,276,82]}
+{"kind":"shape","id":"sh/72x4nap4","slide":2,"bbox":[480,250,320,150]}
+{"kind":"shape","id":"sh/zqtcj6to","slide":2,"bbox":[480,250,7,150]}
+{"kind":"textbox","id":"sh/65wjudg7","slide":2,"text":"Fragmented evidence","textPreview":"Fragmented evidence","textChars":19,"textLines":1,"bbox":[502,268,276,28]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":2,"text":"Orders, market data, engine state, admin actions, and exchange responses live in different places.","textPreview":"Orders, market data, engine state, admin actions, and exchange responses live in different places.","textChars":98,"textLines":1,"bbox":[502,306,276,82]}
+{"kind":"shape","id":"sh/obm58z25","slide":2,"bbox":[868,250,320,150]}
+{"kind":"shape","id":"sh/zed8v6ps","slide":2,"bbox":[868,250,7,150]}
+{"kind":"textbox","id":"sh/6xkf6dcb","slide":2,"text":"Hard to defend","textPreview":"Hard to defend","textChars":14,"textLines":1,"bbox":[890,268,276,28]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":2,"text":"The final answer must explain expected behavior, observed behavior, reason codes, and remediation.","textPreview":"The final answer must explain expected behavior, observed behavior, reason codes, and remediation.","textChars":98,"textLines":1,"bbox":[890,306,276,82]}
+{"kind":"shape","id":"sh/oza1gvy9","slide":2,"bbox":[150,499,8,8]}
+{"kind":"textbox","id":"sh/z61032ls","slide":2,"text":"The real question is: did the trading system behave correctly?","textPreview":"The real question is: did the trading system behave correctly?","textChars":62,"textLines":1,"bbox":[174,490,876,44]}
+{"kind":"shape","id":"sh/al87ed8b","slide":2,"bbox":[150,547,8,8]}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":2,"text":"TIA is built to make that answer repeatable, evidence-backed, and auditable.","textPreview":"TIA is built to make that answer repeatable, evidence-backed, and auditable.","textChars":76,"textLines":1,"bbox":[174,538,876,44]}
+{"kind":"notes","id":"nt/qozrrk","slide":2,"text":""}
+{"kind":"slide","id":"sl/8hv3ni","slide":3,"title":"WHY IT MATTERS","textShapes":10}
+{"kind":"textbox","id":"sh/cvixczed","slide":3,"text":"WHY IT MATTERS","textPreview":"WHY IT MATTERS","textChars":14,"textLines":1,"bbox":[72,48,620,24]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":3,"text":"Recent and well-known incidents show the risk pattern","textPreview":"Recent and well-known incidents show the risk pattern","textChars":53,"textLines":1,"bbox":[72,84,940,88]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":3,"text":"These examples motivate the controls. TIA validates the trading-system response to similar patterns; it does not claim to diagnose an external venue root cause without its evidence feeds.","textPreview":"These examples motivate the controls. TIA validates the trading-system response to similar patterns; it does not claim to diagnose an ext...","textChars":187,"textLines":1,"bbox":[72,174,980,48]}
+{"kind":"textbox","id":"sh/54zidony","slide":3,"text":"TIA MVP | 3/8","textPreview":"TIA MVP | 3/8","textChars":13,"textLines":1,"bbox":[72,670,180,18]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":3,"text":"Sources: SEC Knight Capital order; MarketWatch Jun 3 2024","textPreview":"Sources: SEC Knight Capital order; MarketWatch Jun 3 2024","textChars":57,"textLines":1,"bbox":[375,670,820,18]}
+{"kind":"shape","id":"sh/nyd0z610","slide":3,"bbox":[105,250,480,240]}
+{"kind":"shape","id":"sh/udg7adsj","slide":3,"bbox":[105,250,7,240]}
+{"kind":"textbox","id":"sh/1032lszq","slide":3,"text":"Knight Capital | Aug 1, 2012","textPreview":"Knight Capital | Aug 1, 2012","textChars":28,"textLines":1,"bbox":[127,268,436,28]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":3,"text":"More famous issue: pre-trade controls, runaway algo behavior, order flooding, kill switch, and deployment controls. Knight lost about $440M after the malfunction.","textPreview":"More famous issue: pre-trade controls, runaway algo behavior, order flooding, kill switch, and deployment controls. Knight lost about $44...","textChars":162,"textLines":1,"bbox":[127,306,436,172]}
+{"kind":"shape","id":"sh/25kb6xkf","slide":3,"bbox":[695,250,480,240]}
+{"kind":"shape","id":"sh/rqd4vmtw","slide":3,"bbox":[695,250,7,240]}
+{"kind":"textbox","id":"sh/kb6xkf6d","slide":3,"text":"NYSE / Berkshire | Jun 3, 2024","textPreview":"NYSE / Berkshire | Jun 3, 2024","textChars":30,"textLines":1,"bbox":[717,268,436,28]}
+{"kind":"textbox","id":"sh/9w3m94fu","slide":3,"text":"Recent market incident: a NYSE issue caused Berkshire Hathaway shares to briefly appear down almost 100%, and multiple stocks were halted.","textPreview":"Recent market incident: a NYSE issue caused Berkshire Hathaway shares to briefly appear down almost 100%, and multiple stocks were halted.","textChars":138,"textLines":1,"bbox":[717,306,436,172]}
+{"kind":"textbox","id":"sh/2t83itgf","slide":3,"text":"Mapping to TIA: Knight -> Pre-Trade Risk Control Investigation. NYSE/Berkshire -> Market Data Stress Investigation.","textPreview":"Mapping to TIA: Knight -> Pre-Trade Risk Control Investigation. NYSE/Berkshire -> Market Data Stress Investigation.","textChars":115,"textLines":1,"bbox":[140,540,980,44]}
+{"kind":"notes","id":"nt/8hv3ni","slide":3,"text":""}
+{"kind":"slide","id":"sl/okuudf","slide":4,"title":"SOLUTION INTRODUCTION","textShapes":18}
+{"kind":"textbox","id":"sh/032lszqt","slide":4,"text":"SOLUTION INTRODUCTION","textPreview":"SOLUTION INTRODUCTION","textChars":21,"textLines":1,"bbox":[72,48,620,24]}
+{"kind":"textbox","id":"sh/bi9s36hc","slide":4,"text":"TIA combines a Validator with an Investigator","textPreview":"TIA combines a Validator with an Investigator","textChars":45,"textLines":1,"bbox":[72,84,940,88]}
+{"kind":"textbox","id":"sh/ixczed8v","slide":4,"text":"The pre-demo solution intro should be light: TIA checks controls, gathers evidence, and coordinates agents to explain the result.","textPreview":"The pre-demo solution intro should be light: TIA checks controls, gathers evidence, and coordinates agents to explain the result.","textChars":129,"textLines":1,"bbox":[72,174,980,48]}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":4,"text":"TIA MVP | 4/8","textPreview":"TIA MVP | 4/8","textChars":13,"textLines":1,"bbox":[72,670,180,18]}
+{"kind":"shape","id":"sh/0fepkzup","slide":4,"bbox":[105,245,470,210]}
+{"kind":"shape","id":"sh/bulwval8","slide":4,"bbox":[105,245,7,210]}
+{"kind":"textbox","id":"sh/i9s36hcr","slide":4,"text":"Validator","textPreview":"Validator","textChars":9,"textLines":1,"bbox":[127,263,426,28]}
+{"kind":"textbox","id":"sh/t47y1kre","slide":4,"text":"Runs deterministic specialist checks for each control and returns PASS, FAIL, or REVIEW with evidence, confidence, reason codes, and remediation.","textPreview":"Runs deterministic specialist checks for each control and returns PASS, FAIL, or REVIEW with evidence, confidence, reason codes, and reme...","textChars":145,"textLines":1,"bbox":[127,301,426,142]}
+{"kind":"shape","id":"sh/0je9cvix","slide":4,"bbox":[705,245,470,210]}
+{"kind":"shape","id":"sh/a5gbq1or","slide":4,"bbox":[705,245,7,210]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":4,"text":"Investigator","textPreview":"Investigator","textChars":12,"textLines":1,"bbox":[727,263,426,28]}
+{"kind":"textbox","id":"sh/s72x4nap","slide":4,"text":"Uses planner, specialist agents, regulatory mapping, critic review, and synthesis to produce the final finding and trace.","textPreview":"Uses planner, specialist agents, regulatory mapping, critic review, and synthesis to produce the final finding and trace.","textChars":121,"textLines":1,"bbox":[727,301,426,142]}
+{"kind":"shape","id":"sh/lszqtcj6","slide":4,"bbox":[72,525,180,86]}
+{"kind":"textbox","id":"sh/adsji5sn","slide":4,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[86,543,26,28]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":4,"text":"Scenario","textPreview":"Scenario","textChars":8,"textLines":1,"bbox":[120,543,118,48]}
+{"kind":"shape","id":"sh/sji5snel","slide":4,"bbox":[259,555,26,28]}
+{"kind":"shape","id":"sh/h4byhgn2","slide":4,"bbox":[294,525,180,86]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":4,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[308,543,26,28]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":4,"text":"Evidence","textPreview":"Evidence","textChars":8,"textLines":1,"bbox":[342,543,118,48]}
+{"kind":"shape","id":"sh/ra5gbq1o","slide":4,"bbox":[481,555,26,28]}
+{"kind":"shape","id":"sh/2p8nqxs7","slide":4,"bbox":[516,525,180,86]}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":4,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[530,543,26,28]}
+{"kind":"textbox","id":"sh/gvy90je9","slide":4,"text":"Agents","textPreview":"Agents","textChars":6,"textLines":1,"bbox":[564,543,118,48]}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":4,"bbox":[703,555,26,28]}
+{"kind":"shape","id":"sh/2hwfyxob","slide":4,"bbox":[738,525,180,86]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[752,543,26,28]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":4,"text":"Critic","textPreview":"Critic","textChars":6,"textLines":1,"bbox":[786,543,118,48]}
+{"kind":"shape","id":"sh/rqd4vmtw","slide":4,"bbox":[925,555,26,28]}
+{"kind":"shape","id":"sh/25kb6xkf","slide":4,"bbox":[960,525,180,86]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":4,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[974,543,26,28]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":4,"text":"Finding","textPreview":"Finding","textChars":7,"textLines":1,"bbox":[1008,543,118,48]}
+{"kind":"notes","id":"nt/okuudf","slide":4,"text":""}
+{"kind":"slide","id":"sl/1gjmou","slide":5,"title":"LIVE DEMO PATH","textShapes":19}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":5,"text":"LIVE DEMO PATH","textPreview":"LIVE DEMO PATH","textChars":14,"textLines":1,"bbox":[72,48,620,24]}
+{"kind":"textbox","id":"sh/a1gvy90j","slide":5,"text":"Sidebar sequence for the walkthrough","textPreview":"Sidebar sequence for the walkthrough","textChars":36,"textLines":1,"bbox":[72,84,940,88]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":5,"text":"Keep narration light while clicking: show setup, execute cases, then point to evidence result and agent trace.","textPreview":"Keep narration light while clicking: show setup, execute cases, then point to evidence result and agent trace.","textChars":110,"textLines":1,"bbox":[72,174,980,48]}
+{"kind":"textbox","id":"sh/svu9knih","slide":5,"text":"TIA MVP | 5/8","textPreview":"TIA MVP | 5/8","textChars":13,"textLines":1,"bbox":[72,670,180,18]}
+{"kind":"shape","id":"sh/hgn29gr2","slide":5,"bbox":[105,202,1070,54]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":5,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[130,215,30,26]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":5,"text":"Trading System Validation","textPreview":"Trading System Validation","textChars":25,"textLines":1,"bbox":[190,215,290,26]}
+{"kind":"textbox","id":"sh/sji5snel","slide":5,"text":"Show the validator surface and connection options.","textPreview":"Show the validator surface and connection options.","textChars":50,"textLines":1,"bbox":[515,215,590,26]}
+{"kind":"shape","id":"sh/h4byhgn2","slide":5,"bbox":[105,276,1070,54]}
+{"kind":"textbox","id":"sh/p4r65wju","slide":5,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[130,289,30,26]}
+{"kind":"textbox","id":"sh/wjudg7ad","slide":5,"text":"Investigation Flow","textPreview":"Investigation Flow","textChars":18,"textLines":1,"bbox":[190,289,290,26]}
+{"kind":"textbox","id":"sh/7y1kre1w","slide":5,"text":"Show how setup, evidence, agents, and outcome connect.","textPreview":"Show how setup, evidence, agents, and outcome connect.","textChars":54,"textLines":1,"bbox":[515,289,590,26]}
+{"kind":"shape","id":"sh/ed8v6psf","slide":5,"bbox":[105,350,1070,54]}
+{"kind":"textbox","id":"sh/pwb2hwfy","slide":5,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[130,363,30,26]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":5,"text":"Agents at Work","textPreview":"Agents at Work","textChars":14,"textLines":1,"bbox":[190,363,290,26]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":5,"text":"Show validation agents and investigation agents.","textPreview":"Show validation agents and investigation agents.","textChars":48,"textLines":1,"bbox":[515,363,590,26]}
+{"kind":"shape","id":"sh/i5sneloj","slide":5,"bbox":[105,424,1070,54]}
+{"kind":"textbox","id":"sh/pkzupwb2","slide":5,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[130,437,30,26]}
+{"kind":"textbox","id":"sh/0z61032l","slide":5,"text":"Investigative Experience","textPreview":"Investigative Experience","textChars":24,"textLines":1,"bbox":[190,437,290,26]}
+{"kind":"textbox","id":"sh/w7mp0bi9","slide":5,"text":"Run both guided investigation use cases.","textPreview":"Run both guided investigation use cases.","textChars":40,"textLines":1,"bbox":[515,437,590,26]}
+{"kind":"shape","id":"sh/psfil0rq","slide":5,"bbox":[105,498,1070,54]}
+{"kind":"textbox","id":"sh/e1w7mp0b","slide":5,"text":"5","textPreview":"5","textChars":1,"textLines":1,"bbox":[130,511,30,26]}
+{"kind":"textbox","id":"sh/7mp0bi9s","slide":5,"text":"Demo Stack","textPreview":"Demo Stack","textChars":10,"textLines":1,"bbox":[190,511,290,26]}
+{"kind":"textbox","id":"sh/wval87ed","slide":5,"text":"Optional: show Exchange Simulator and AlgoEngine_TCP ports/status.","textPreview":"Optional: show Exchange Simulator and AlgoEngine_TCP ports/status.","textChars":66,"textLines":1,"bbox":[515,511,590,26]}
+{"kind":"notes","id":"nt/1gjmou","slide":5,"text":""}
+{"kind":"slide","id":"sl/ssz7iq","slide":6,"title":"DEMO CASES","textShapes":9}
+{"kind":"textbox","id":"sh/bm58z25k","slide":6,"text":"DEMO CASES","textPreview":"DEMO CASES","textChars":10,"textLines":1,"bbox":[72,48,620,24]}
+{"kind":"textbox","id":"sh/47y1kre1","slide":6,"text":"Two practical investigation use cases","textPreview":"Two practical investigation use cases","textChars":37,"textLines":1,"bbox":[72,84,940,88]}
+{"kind":"textbox","id":"sh/tsvu9kni","slide":6,"text":"Use seeded demo evidence for predictable results; use Active Trading Connection when AlgoEngine_TCP is running and healthy.","textPreview":"Use seeded demo evidence for predictable results; use Active Trading Connection when AlgoEngine_TCP is running and healthy.","textChars":123,"textLines":1,"bbox":[72,174,980,48]}
+{"kind":"textbox","id":"sh/mp0bi9s3","slide":6,"text":"TIA MVP | 6/8","textPreview":"TIA MVP | 6/8","textChars":13,"textLines":1,"bbox":[72,670,180,18]}
+{"kind":"shape","id":"sh/bat47y1k","slide":6,"bbox":[100,235,480,230]}
+{"kind":"shape","id":"sh/4vmtwra5","slide":6,"bbox":[100,235,7,230]}
+{"kind":"textbox","id":"sh/tgfmlkjm","slide":6,"text":"Market Data Stress Investigation","textPreview":"Market Data Stress Investigation","textChars":32,"textLines":1,"bbox":[122,253,436,28]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":6,"text":"Tests crossed, locked, and one-sided market conditions. Expected PASS when protections restrict or normalize unsafe market states; FAIL when protections are disabled.","textPreview":"Tests crossed, locked, and one-sided market conditions. Expected PASS when protections restrict or normalize unsafe market states; FAIL w...","textChars":166,"textLines":1,"bbox":[122,291,436,162]}
+{"kind":"shape","id":"sh/b2hwfyxo","slide":6,"bbox":[700,235,480,230]}
+{"kind":"shape","id":"sh/f6dcbulw","slide":6,"bbox":[700,235,7,230]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":6,"text":"Pre-Trade Risk Control Investigation","textPreview":"Pre-Trade Risk Control Investigation","textChars":36,"textLines":1,"bbox":[722,253,436,28]}
+{"kind":"textbox","id":"sh/xc3ylc7u","slide":6,"text":"Tests duplicate orders, bad-price behavior, market orders, parent-child linkage, kill switch, and max evaluation frequency.","textPreview":"Tests duplicate orders, bad-price behavior, market orders, parent-child linkage, kill switch, and max evaluation frequency.","textChars":123,"textLines":1,"bbox":[722,291,436,162]}
+{"kind":"textbox","id":"sh/4r65wjud","slide":6,"text":"Show after execution: Final status, confidence, failed/review controls, evidence result, agent trace, and raw JSON.","textPreview":"Show after execution: Final status, confidence, failed/review controls, evidence result, agent trace, and raw JSON.","textChars":115,"textLines":1,"bbox":[130,535,1020,48]}
+{"kind":"notes","id":"nt/ssz7iq","slide":6,"text":""}
+{"kind":"slide","id":"sl/mejhwk","slide":7,"title":"POST-DEMO INTERPRETATION","textShapes":11}
+{"kind":"textbox","id":"sh/4byhgn29","slide":7,"text":"POST-DEMO INTERPRETATION","textPreview":"POST-DEMO INTERPRETATION","textChars":24,"textLines":1,"bbox":[72,48,620,24]}
+{"kind":"textbox","id":"sh/bq1oryts","slide":7,"text":"What the audience just saw","textPreview":"What the audience just saw","textChars":26,"textLines":1,"bbox":[72,84,940,88]}
+{"kind":"textbox","id":"sh/m58z25kb","slide":7,"text":"After the demo, explain why the result is not just a generated report.","textPreview":"After the demo, explain why the result is not just a generated report.","textChars":70,"textLines":1,"bbox":[72,174,980,48]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":7,"text":"TIA MVP | 7/8","textPreview":"TIA MVP | 7/8","textChars":13,"textLines":1,"bbox":[72,670,180,18]}
+{"kind":"shape","id":"sh/4nap4r65","slide":7,"bbox":[120,234,8,8]}
+{"kind":"textbox","id":"sh/b2hwfyxo","slide":7,"text":"Validator produced deterministic control evidence.","textPreview":"Validator produced deterministic control evidence.","textChars":50,"textLines":1,"bbox":[144,225,876,54]}
+{"kind":"shape","id":"sh/mhk3q5o7","slide":7,"bbox":[120,292,8,8]}
+{"kind":"textbox","id":"sh/tgfmlkjm","slide":7,"text":"Investigator selected a path and called specialist agents as tools.","textPreview":"Investigator selected a path and called specialist agents as tools.","textChars":67,"textLines":1,"bbox":[144,283,876,54]}
+{"kind":"shape","id":"sh/4vmtwra5","slide":7,"bbox":[120,350,8,8]}
+{"kind":"textbox","id":"sh/i5sneloj","slide":7,"text":"Critic reviewed evidence gaps or contradictions.","textPreview":"Critic reviewed evidence gaps or contradictions.","textChars":48,"textLines":1,"bbox":[144,341,876,54]}
+{"kind":"shape","id":"sh/7qpg3ex0","slide":7,"bbox":[120,408,8,8]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":7,"text":"Synthesizer produced final status, confidence, root cause, and recommended actions.","textPreview":"Synthesizer produced final status, confidence, root cause, and recommended actions.","textChars":83,"textLines":1,"bbox":[144,399,876,54]}
+{"kind":"shape","id":"sh/pwb2hwfy","slide":7,"bbox":[120,466,8,8]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":7,"text":"The output is traceable: control result -> evidence -> agent trace -> final finding.","textPreview":"The output is traceable: control result -> evidence -> agent trace -> final finding.","textChars":84,"textLines":1,"bbox":[144,457,876,54]}
+{"kind":"shape","id":"sh/7y1kre1w","slide":7,"bbox":[760,505,390,95]}
+{"kind":"shape","id":"sh/wjudg7ad","slide":7,"bbox":[760,505,7,95]}
+{"kind":"textbox","id":"sh/p4r65wju","slide":7,"text":"Key message","textPreview":"Key message","textChars":11,"textLines":1,"bbox":[782,523,346,28]}
+{"kind":"textbox","id":"sh/ih4byhgn","slide":7,"text":"TIA plans, validates, challenges, and explains. That is what makes the MVP agentic rather than a static checklist.","textPreview":"TIA plans, validates, challenges, and explains. That is what makes the MVP agentic rather than a static checklist.","textChars":114,"textLines":1,"bbox":[782,561,346,27]}
+{"kind":"notes","id":"nt/mejhwk","slide":7,"text":""}
+{"kind":"slide","id":"sl/lfyuzu","slide":8,"title":"MVP BOUNDARY AND FUTURE PATH","textShapes":11}
+{"kind":"textbox","id":"sh/1032lszq","slide":8,"text":"MVP BOUNDARY AND FUTURE PATH","textPreview":"MVP BOUNDARY AND FUTURE PATH","textChars":28,"textLines":1,"bbox":[72,48,620,24]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":8,"text":"Scoped now, extensible into a standalone product","textPreview":"Scoped now, extensible into a standalone product","textChars":48,"textLines":1,"bbox":[72,84,940,88]}
+{"kind":"textbox","id":"sh/judg7ads","slide":8,"text":"The current build proves the architecture. More agents, evidence sources, and regulations can be added incrementally.","textPreview":"The current build proves the architecture. More agents, evidence sources, and regulations can be added incrementally.","textChars":117,"textLines":1,"bbox":[72,174,980,48]}
+{"kind":"textbox","id":"sh/c7u54zid","slide":8,"text":"TIA MVP | 8/8","textPreview":"TIA MVP | 8/8","textChars":13,"textLines":1,"bbox":[72,670,180,18]}
+{"kind":"shape","id":"sh/1orytsvu","slide":8,"bbox":[88,235,330,220]}
+{"kind":"shape","id":"sh/u18jqh0f","slide":8,"bbox":[88,235,7,220]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":8,"text":"MVP today","textPreview":"MVP today","textChars":9,"textLines":1,"bbox":[110,253,286,28]}
+{"kind":"textbox","id":"sh/cvixczed","slide":8,"text":"Nine controls, two guided investigation cases, seeded demo evidence, Exchange Simulator, optional AlgoEngine_TCP, agent trace, confidence, and remediation.","textPreview":"Nine controls, two guided investigation cases, seeded demo evidence, Exchange Simulator, optional AlgoEngine_TCP, agent trace, confidence...","textChars":155,"textLines":1,"bbox":[110,291,286,152]}
+{"kind":"shape","id":"sh/5gbq1ory","slide":8,"bbox":[475,235,330,220]}
+{"kind":"shape","id":"sh/18jqh0fe","slide":8,"bbox":[475,235,7,220]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":8,"text":"Add next","textPreview":"Add next","textChars":8,"textLines":1,"bbox":[497,253,286,28]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":8,"text":"Runaway order storm, stale market data, venue outage, reject spike, LULD / price-band sanity, deployment mismatch, replay from real logs.","textPreview":"Runaway order storm, stale market data, venue outage, reject spike, LULD / price-band sanity, deployment mismatch, replay from real logs.","textChars":137,"textLines":1,"bbox":[497,291,286,152]}
+{"kind":"shape","id":"sh/qh0fepkz","slide":8,"bbox":[862,235,330,220]}
+{"kind":"shape","id":"sh/1w7mp0bi","slide":8,"bbox":[862,235,7,220]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":8,"text":"Product direction","textPreview":"Product direction","textChars":17,"textLines":1,"bbox":[884,253,286,28]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":8,"text":"Standalone platform for trading compliance validation, operational resilience testing, and post-incident investigation.","textPreview":"Standalone platform for trading compliance validation, operational resilience testing, and post-incident investigation.","textChars":119,"textLines":1,"bbox":[884,291,286,152]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":8,"text":"Closing line: TIA makes trading-system compliance validation faster, more explainable, and easier to defend.","textPreview":"Closing line: TIA makes trading-system compliance validation faster, more explainable, and easier to defend.","textChars":108,"textLines":1,"bbox":[120,535,1000,52]}
+{"kind":"notes","id":"nt/lfyuzu","slide":8,"text":""}
