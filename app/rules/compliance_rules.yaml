@@ -1,0 +1,22 @@
+severity_rules:
+  - code: RULE_CRITICAL_BUSINESS_SERVICE
+    description: Asset supports a high-criticality or important business service.
+    severity: high
+    priority: P1
+  - code: RULE_VENDOR_DEPENDENCY
+    description: Asset has third-party or vendor dependency.
+    severity: high
+    priority: P1
+  - code: RULE_TECHNOLOGY_IMPACT
+    description: Obligation directly affects technology, resilience, systems, or dependency mapping.
+    severity: medium
+    priority: P2
+  - code: RULE_EVIDENCE_REQUIRED
+    description: Obligation requires documented evidence or audit artefacts.
+    severity: medium
+    priority: P2
+  - code: RULE_DEFAULT_REVIEW
+    description: Default review required for mapped regulatory obligation.
+    severity: medium
+    priority: P3
+
