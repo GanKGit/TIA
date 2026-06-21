@@ -18,6 +18,7 @@ import streamlit as st
 
 from app.services.compliance_pipeline import CompliancePlatform
 from app.services.compliance_pipeline import TradingComplianceValidationService
+from app.services.process_manager import find_service_process_roots, terminate_process_tree
 from app.models.investigation import InvestigationRequest
 from app.services.investigation_service import AgenticInvestigationService, DEMO_INVESTIGATION_CASES
 from app.agents.registry import ValidationAgentRegistry
@@ -650,7 +651,13 @@ def render_demo_control_center() -> None:
         run_demo_stack_health_check(host, int(exchange_port), int(query_port), int(client_port), int(market_data_port), int(admin_port), platform)
 
     if stop_col.button("Stop Full Demo Stack", use_container_width=True):
-        stop_full_demo_stack()
+        stop_full_demo_stack(
+            int(client_port),
+            int(market_data_port),
+            int(admin_port),
+            int(exchange_port),
+            int(query_port),
+        )
 
     log_text = "\n".join(st.session_state.get("demo_stack_log", ["$ waiting for demo stack action..."]))
     st.text_area("Demo stack status", value=log_text, height=300, disabled=True)
@@ -890,30 +897,57 @@ def configure_demo_stack_gateway(host: str, query_port: int, client_port: int, m
     append_demo_stack_log("[OK] validation gateway set to algoengine_tcp")
 
 
-def stop_full_demo_stack() -> None:
+def stop_full_demo_stack(client_port: int, market_data_port: int, admin_port: int, exchange_port: int, query_port: int) -> None:
     reset_demo_stack_log()
     append_demo_stack_log("$ demo-stack down")
-    stop_named_process("algoengine_process", "AlgoEngine local_engine")
-    stop_named_process("dummy_exchange_process", "Exchange Simulator")
+    stop_service_process(
+        "algoengine_process",
+        "AlgoEngine local_engine",
+        "AlgoEngine.local_engine",
+        (client_port, market_data_port, admin_port),
+    )
+    stop_service_process(
+        "dummy_exchange_process",
+        "Exchange Simulator",
+        "AlgoEngine.dummy_exchange",
+        (exchange_port, query_port),
+    )
     st.session_state.demo_stack_ready = False
     append_demo_stack_log("[OK] stop sequence completed")
 
 
-def stop_named_process(key: str, label: str) -> None:
+def stop_service_process(key: str, label: str, module_name: str, ports: tuple[int, ...]) -> None:
+    stopped_pids: set[int] = set()
     process = st.session_state.get(key)
-    if process is None:
-        append_demo_stack_log(f"[SKIP] {label} was not started by this UI session")
-        return
-    if process.poll() is not None:
+    if process is not None and process.poll() is None:
+        try:
+            terminated = terminate_process_tree(process.pid)
+            stopped_pids.update(terminated)
+            append_demo_stack_log(f"[OK] stopped tracked {label} process tree pids={terminated}")
+        except Exception as exc:
+            append_demo_stack_log(f"[FAIL] could not stop tracked {label}: {exc}")
+    elif process is not None:
         append_demo_stack_log(f"[OK] {label} already stopped rc={process.returncode}")
-        return
-    process.terminate()
+    st.session_state.pop(key, None)
+
     try:
-        process.wait(timeout=5)
-    except subprocess.TimeoutExpired:
-        process.kill()
-        process.wait(timeout=5)
-    append_demo_stack_log(f"[OK] stopped {label} pid={process.pid}")
+        recovered_pids = find_service_process_roots(ports, module_name, PROJECT_ROOT)
+    except Exception as exc:
+        append_demo_stack_log(f"[FAIL] could not inspect configured ports for {label}: {exc}")
+        return
+
+    for pid in recovered_pids:
+        if pid in stopped_pids:
+            continue
+        try:
+            terminated = terminate_process_tree(pid)
+            stopped_pids.update(terminated)
+            append_demo_stack_log(f"[OK] stopped recovered {label} process tree pids={terminated}")
+        except Exception as exc:
+            append_demo_stack_log(f"[FAIL] could not stop recovered {label} pid={pid}: {exc}")
+
+    if not stopped_pids:
+        append_demo_stack_log(f"[SKIP] no matching TIA {label} process found on ports={list(ports)}")
 
 
 def render_validator_mvp() -> None:

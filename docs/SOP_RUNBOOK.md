@@ -38,16 +38,26 @@ The term `knowledge` may still appear in API/model names because the validator k
 
 ```powershell
 cd "C:\GAN\Learn\ML & AI\HCL Hackathon  - 2026\Project\TIA"
-python -m venv .venv
+$Python = "$env:LOCALAPPDATA\Programs\Python\Python312\python.exe"
+& $Python --version  # Expected: Python 3.12.x
+
+# Run this line only when replacing an existing virtual environment.
+if (Test-Path .venv) { Remove-Item .venv -Recurse -Force }
+
+& $Python -m venv .venv
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 .\.venv\Scripts\Activate.ps1
+python --version  # Verify the activated environment also uses Python 3.12.x
 pip install -r requirements.txt
 ```
+
+Using the explicit Windows Python path prevents an MSYS2 Python earlier on `PATH`
+from creating a Unix-style `.venv\bin` directory instead of `.venv\Scripts`.
 
 ## 5. Start UI
 
 ```powershell
-streamlit run app\ui.py
+python -m streamlit run app\ui.py
 ```
 
 Use the sidebar in this order:
