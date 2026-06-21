@@ -2,6 +2,7 @@
 .idea/
 .venv/
 .pytest_cache/
+.streamlit/
 __pycache__/
 *.py[cod]
 *.pyo
