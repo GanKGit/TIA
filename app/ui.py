@@ -230,6 +230,124 @@ def render_investigative_experience() -> None:
     render_investigation_result(finding)
 
 
+def validation_status_label(status: str) -> str:
+    labels = {
+        "pass": "PASS - control behaved as expected",
+        "fail": "FAIL - breach evidence found",
+        "review": "REVIEW - evidence incomplete",
+    }
+    return labels.get(status, status.upper())
+
+
+def validation_severity(status: str) -> str:
+    severities = {
+        "pass": "OK",
+        "fail": "High",
+        "review": "Medium",
+    }
+    return severities.get(status, "Unknown")
+
+
+def compact_text(value: object, limit: int = 180) -> str:
+    text = " ".join(str(value or "").split())
+    if len(text) <= limit:
+        return text
+    return f"{text[: limit - 3].rstrip()}..."
+
+
+def evidence_sources(item) -> str:
+    sources = []
+    for evidence in item.evidence:
+        source = getattr(evidence, "source", "")
+        if source and source not in sources:
+            sources.append(source)
+    return ", ".join(sources) or "Not captured"
+
+
+def evidence_snapshot(item) -> str:
+    descriptions = [
+        getattr(evidence, "description", "")
+        for evidence in item.evidence
+        if getattr(evidence, "description", "")
+    ]
+    if descriptions:
+        return compact_text(" | ".join(descriptions), 220)
+    return compact_text(item.observed_behavior, 220)
+
+
+def render_validation_evidence_table(validation_results, title: str = "Evidence Result") -> None:
+    st.markdown(f"### {title}")
+    if not validation_results:
+        st.info("No validation evidence was produced for this investigation.")
+        return
+
+    counts = Counter(item.status.value for item in validation_results)
+    pass_col, fail_col, review_col, evidence_col = st.columns(4)
+    pass_col.metric("Passed", counts.get("pass", 0))
+    fail_col.metric("Failed", counts.get("fail", 0))
+    review_col.metric("Needs review", counts.get("review", 0))
+    evidence_col.metric("Evidence items", sum(len(item.evidence) for item in validation_results))
+
+    rows = []
+    for item in validation_results:
+        status = item.status.value
+        rows.append(
+            {
+                "Status": validation_status_label(status),
+                "Severity": validation_severity(status),
+                "Control": f"{item.control_id} - {item.control_name}",
+                "Agent": item.agent_name.replace("-", " "),
+                "Finding": compact_text(item.observed_behavior, 140),
+                "Reason": ", ".join(item.reason_codes) or "No reason code",
+                "Evidence": evidence_snapshot(item),
+                "Confidence": f"{item.confidence:.0%}",
+            }
+        )
+
+    st.dataframe(
+        pd.DataFrame(rows),
+        hide_index=True,
+        use_container_width=True,
+        column_config={
+            "Finding": st.column_config.TextColumn("Finding", width="large"),
+            "Evidence": st.column_config.TextColumn("Evidence", width="large"),
+            "Control": st.column_config.TextColumn("Control", width="medium"),
+            "Confidence": st.column_config.TextColumn("Confidence", width="small"),
+        },
+    )
+
+    with st.expander("Control-by-control evidence details", expanded=False):
+        for item in validation_results:
+            status = item.status.value
+            st.markdown(f"**{validation_status_label(status)} | {item.control_id} - {item.control_name}**")
+            st.write(f"Agent: {item.agent_name}")
+            st.write(f"Expected: {item.expected_behavior}")
+            st.write(f"Observed: {item.observed_behavior}")
+            if item.reason_codes:
+                st.write(f"Reason codes: {', '.join(item.reason_codes)}")
+            st.write(f"Evidence source: {evidence_sources(item)}")
+            if item.evidence:
+                evidence_rows = []
+                for evidence in item.evidence:
+                    evidence_rows.append(
+                        {
+                            "type": evidence.evidence_type,
+                            "source": evidence.source,
+                            "observed_at": evidence.observed_at.isoformat(),
+                            "description": evidence.description,
+                            "value": compact_text(evidence.value, 260),
+                        }
+                    )
+                st.dataframe(pd.DataFrame(evidence_rows), hide_index=True, use_container_width=True)
+            if item.remediation:
+                st.write("Remediation:")
+                for action in item.remediation:
+                    st.write(f"- {action}")
+            if item.citations:
+                st.write(f"Citations: {', '.join(item.citations)}")
+            st.divider()
+
+
 def render_investigation_result(finding) -> None:
     left, middle, right = st.columns(3)
     left.metric("Final status", finding.final_status.value.upper())
@@ -257,24 +375,7 @@ def render_investigation_result(finding) -> None:
         with st.expander("Executed parameters", expanded=False):
             st.json(finding.regulatory_mapping["request_parameters"])
 
-    st.markdown("### Evidence Result")
-    st.dataframe(
-        pd.DataFrame(
-            [
-                {
-                    "control_id": item.control_id,
-                    "control_name": item.control_name,
-                    "agent": item.agent_name,
-                    "status": item.status.value,
-                    "reason_codes": ", ".join(item.reason_codes),
-                    "confidence": item.confidence,
-                }
-                for item in finding.validation_results
-            ]
-        ),
-        hide_index=True,
-        use_container_width=True,
-    )
+    render_validation_evidence_table(finding.validation_results, "Evidence Result")
 
     st.markdown("### Agent Trace")
     st.dataframe(
@@ -588,23 +689,7 @@ def render_agentic_investigation() -> None:
         use_container_width=True,
     )
 
-    st.markdown("### Validation Evidence Used")
-    st.dataframe(
-        pd.DataFrame(
-            [
-                {
-                    "control_id": item.control_id,
-                    "control_name": item.control_name,
-                    "agent": item.agent_name,
-                    "status": item.status.value,
-                    "reason_codes": ", ".join(item.reason_codes),
-                }
-                for item in finding.validation_results
-            ]
-        ),
-        hide_index=True,
-        use_container_width=True,
-    )
+    render_validation_evidence_table(finding.validation_results, "Validation Evidence Used")
 
     if finding.contradictions:
         st.markdown("### Evidence Critic Findings")
